@@ -30,12 +30,12 @@
             {
               "key": "ctrl+k",
               "command": "kill-ring.kill",
-              "when": "editorFocus"
+              "when": "textInputFocus && !editorReadonly"
             },
             {
               "key": "ctrl+y",
               "command": "kill-ring.yank",
-              "when": "editorFocus"
+              "when": "textInputFocus && !editorReadonly"
             }
           ]
     },
