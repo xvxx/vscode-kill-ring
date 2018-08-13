@@ -11,21 +11,33 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.kill",
-        "onCommand:extension.yank"
+        "onCommand:kill-ring.kill",
+        "onCommand:kill-ring.yank"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.kill",
-                "title": "Kill"
+                "command": "kill-ring.kill",
+                "title": "Kill to end of line"
             },
             {
-                "command": "extension.yank",
-                "title": "Yank"
+                "command": "kill-ring.yank",
+                "title": "Yank last killed"
             }
-        ]
+        ],
+        "keybindings": [
+            {
+              "key": "ctrl+k",
+              "command": "kill-ring.kill",
+              "when": "editorFocus"
+            },
+            {
+              "key": "ctrl+y",
+              "command": "kill-ring.yank",
+              "when": "editorFocus"
+            }
+          ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",

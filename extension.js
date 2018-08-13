@@ -3,7 +3,7 @@ const vscode = require('vscode');
 let yanked = null;
 
 function activate(context) {
-    let ydisposable = vscode.commands.registerCommand('extension.yank', function () {
+    let ydisposable = vscode.commands.registerCommand('kill-ring.yank', function () {
         if (!yanked) return;
 
         let e = vscode.window.activeTextEditor;
@@ -17,7 +17,7 @@ function activate(context) {
     });
 
 
-    let kdisposable = vscode.commands.registerCommand('extension.kill', function () {
+    let kdisposable = vscode.commands.registerCommand('kill-ring.kill', function () {
         vscode.commands.executeCommand("cursorEndSelect").then(function () {
             let e = vscode.window.activeTextEditor
             yanked = e.document.getText(e.selection)
