@@ -18,11 +18,12 @@ function activate(context) {
 
 
     let kdisposable = vscode.commands.registerCommand('kill-ring.kill', function () {
-        vscode.commands.executeCommand("cursorEndSelect").then(function () {
-            let e = vscode.window.activeTextEditor
-            yanked = e.document.getText(e.selection)
-            vscode.commands.executeCommand("deleteAllRight")
-        })
+        let e = vscode.window.activeTextEditor
+        let s = e.selection
+        let line = e.document.lineAt(s.start.line)
+        let r = new vscode.Range(s.start, line.range.end)
+        yanked = e.document.getText(r).trim()
+        vscode.commands.executeCommand("deleteAllRight")
     });
 
     context.subscriptions.push(ydisposable);
