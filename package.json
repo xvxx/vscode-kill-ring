@@ -19,11 +19,11 @@
         "commands": [
             {
                 "command": "kill-ring.kill",
-                "title": "Kill to end of line"
+                "title": "kill-ring: Kill to end of line"
             },
             {
                 "command": "kill-ring.yank",
-                "title": "Yank last killed"
+                "title": "kill-ring: Yank last killed"
             }
         ],
         "keybindings": [
