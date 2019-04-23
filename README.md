@@ -1,15 +1,15 @@
-# VSCode Kill Ring
+# 📋 VSCode Kill Ring
 
+Emacs-style kill ring with history, for VS Code. It's like a 2nd clipboard. 
 
-Emacs-style kill ring for VS Code.
+Use `ctrl+k` to cut all text until the end of the line.
 
-Use `ctrl+k` to kill all text until the end of the line.
+After that, use `ctrl+y` to paste the text. 
 
-Subsequently, you can use `ctrl+y` to paste that text. 
+Once you've killed a few things, use `cmd+ctrl+y` to view and paste from the history:
 
-Once you've killed a few things, use `cmd+ctrl+y` to view the history.
+![image](https://user-images.githubusercontent.com/41523880/56614698-79a47480-65ce-11e9-8a29-6e44fd3ad9f9.png)
 
-It's like a separate clipboard.
+Enjoy.
 
-Had to make this because while MacOS supports it in text boxes, VS Code didn't seem to.
-
+- dvkt 
