@@ -4,6 +4,7 @@
     "description": "Emacs' kill-ring in VS Code",
     "version": "0.1.0",
     "publisher": "dvkt",
+    "repository": "https://github.com/dvkt/vscode-kill-ring",
     "engines": {
         "vscode": "^1.26.0"
     },
