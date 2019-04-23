@@ -9,7 +9,7 @@ function activate(context) {
         let e = vscode.window.activeTextEditor;
 
         if (e) {
-            const {document} = e;
+            const { document } = e;
             const edit = new vscode.WorkspaceEdit();
             edit.insert(document.uri, e.selection.start, yanked);
             return vscode.workspace.applyEdit(edit)
