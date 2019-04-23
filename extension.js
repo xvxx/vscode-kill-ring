@@ -33,7 +33,7 @@ function activate(context) {
         let line = e.document.lineAt(s.start.line)
         let r = new vscode.Range(s.start, line.range.end)
         yanked = e.document.getText(r).trim()
-        yanks.push(yanked)
+        yanks.unshift(yanked)
         vscode.commands.executeCommand("deleteAllRight")
     });
 
