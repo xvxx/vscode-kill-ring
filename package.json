@@ -2,7 +2,7 @@
     "name": "kill-ring",
     "displayName": "kill-ring",
     "description": "Emacs' kill-ring in VS Code",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "dvkt",
     "repository": "https://github.com/dvkt/vscode-kill-ring",
     "engines": {
