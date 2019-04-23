@@ -12,7 +12,8 @@
     ],
     "activationEvents": [
         "onCommand:kill-ring.kill",
-        "onCommand:kill-ring.yank"
+        "onCommand:kill-ring.yank",
+        "onCommand:kill-ring.history"
     ],
     "main": "./extension",
     "contributes": {
@@ -24,6 +25,10 @@
             {
                 "command": "kill-ring.yank",
                 "title": "kill-ring: Yank last killed"
+            },
+            {
+                "command": "kill-ring.history",
+                "title": "kill-ring: Kill history"
             }
         ],
         "keybindings": [
@@ -36,7 +41,12 @@
               "key": "ctrl+y",
               "command": "kill-ring.yank",
               "when": "textInputFocus && !editorReadonly"
-            }
+            },
+            {
+                "key": "cmd+ctrl+y",
+                "command": "kill-ring.history",
+                "when": "textInputFocus && !editorReadonly"
+              }
           ]
     },
     "scripts": {
