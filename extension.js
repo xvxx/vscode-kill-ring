@@ -14,7 +14,7 @@ function insert(txt) {
 }
 
 async function showHistory() {
-    const result = await vscode.window.showQuickPick(yanks, {
+    const result = await vscode.window.showQuickPick([...new Set(yanks)], {
         placeHolder: 'Kill history',
         onDidSelectItem: item => vscode.window.showInformationMessage(`Yank ${++i}: ${item}`)
     });
